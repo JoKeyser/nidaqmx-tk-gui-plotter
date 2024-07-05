@@ -4,7 +4,13 @@ A simple GUI to use NI-DAQmx and plot data in real time, in Python and Tk
 
 ## Purpose
 
-Showcase the use of NI-DAQmx in Python by plotting recorded data in real time.
+Showcase the use of a National Instruments DAQ device in Python.
+For now, aim to plot the recorded data in real time and control the data acquisition with a simple GUI.
+
+## Status
+
+This is very much a work in progress, in its early stages.
+Nothing works yet, please tread with care.
 
 ## Design
 
@@ -17,15 +23,15 @@ Only the most recent versions are supported.
 
 ## Roadmap
 
-- [ ] Create minimal example of using NI-DAQmx in Python.
-- [ ] Create minimal example of plotting the data in real time.
-- [ ] Create a TKinter GUI to control the data acquisition and plotting.
+- [ ] Create minimal useful example of using NI-DAQmx in Python.
+- [ ] Add minimal plotting of the data in real time.
+- [ ] Add a TKinter GUI to control the data acquisition and plotting.
 
 ## Installation
 
 Install Python 3 and the necessary modules, see <https://wiki.python.org/moin/BeginnersGuide/Download>.
 
-You also need the following Python modules:
+The following modules are required:
 
 - `nidaqmx` to use NI-DAQmx, see [nidaqmx](https://nidaqmx-python.readthedocs.io/)
 - `numpy` to handle arrays, see [numpy](https://numpy.org/)
@@ -34,4 +40,5 @@ You also need the following Python modules:
 
 ## License
 
-This project is licensed under the CC0 1.0 Universal Creative Commons License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the CC0 1.0 Universal Creative Commons License - see the [LICENSE](LICENSE) file for details.
+A simple summary and translations of the CC0 license are available at <https://creativecommons.org/publicdomain/zero/1.0/>.

@@ -25,7 +25,8 @@ Only the most recent versions are supported.
 
 - [x] Create minimal useful example of using NI-DAQmx in Python.
 - [ ] Add minimal plotting of the data in real time.
-     - [ ] Allow for multiple recording channels.
+     - [x] Allow for multiple recording channels.
+     - [ ] Plot a fixed history of the data, not just the very last capture.
 - [ ] Add a TKinter GUI to control the data acquisition and plotting.
      - [ ] Let user select the device and channels.
      - [ ] Let user select the sampling rate.

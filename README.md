@@ -4,13 +4,13 @@ A simple GUI to use NI-DAQmx and plot data in real time, in Python and Tk
 
 ## Purpose
 
-Showcase the use of a National Instruments DAQ device in Python.
+Showcase the use of a National Instruments (NI) Data Acquisition (DAQ) device in Python.
 For now, aim to plot the recorded data in real time and control the data acquisition with a simple GUI.
 
 ## Status
 
 This is very much a work in progress, in its early stages.
-Nothing works yet, please tread with care.
+Almost nothing works yet, please tread with care.
 
 ## Design
 
@@ -23,9 +23,13 @@ Only the most recent versions are supported.
 
 ## Roadmap
 
-- [ ] Create minimal useful example of using NI-DAQmx in Python.
+- [x] Create minimal useful example of using NI-DAQmx in Python.
 - [ ] Add minimal plotting of the data in real time.
+     - [ ] Allow for multiple recording channels.
 - [ ] Add a TKinter GUI to control the data acquisition and plotting.
+     - [ ] Let user select the device and channels.
+     - [ ] Let user select the sampling rate.
+
 
 ## Installation
 
@@ -33,10 +37,12 @@ Install Python 3 and the necessary modules, see <https://wiki.python.org/moin/Be
 
 The following modules are required:
 
-- `nidaqmx` to use NI-DAQmx, see [nidaqmx](https://nidaqmx-python.readthedocs.io/)
-- `numpy` to handle arrays, see [numpy](https://numpy.org/)
-- `matplotlib` to plot data, see [matplotlib](https://matplotlib.org/)
-- `tkinter` to create the GUI, see [tkinter](https://docs.python.org/3/library/tkinter.html)
+- [`nidaqmx`](https://nidaqmx-python.readthedocs.io/) to use NI-DAQmx, see 
+    - For `nidaqmx` you need to have the NI-DAQmx driver installed; please refer to their documentation.
+- [`numpy`](https://numpy.org/) to handle arrays of data
+- [`matplotlib`](https://matplotlib.org/) to plot data
+- [`tkinter`](https://docs.python.org/3/library/tkinter.html) to create the GUI
+
 
 ## License
 

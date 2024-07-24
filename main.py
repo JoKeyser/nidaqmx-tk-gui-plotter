@@ -48,22 +48,26 @@ HISTORY_LENGTH = int(READ_RATE * HISTORY_DURATION)
 # Both steps must agree: The data rate from hardware to the PC buffer must
 # not be too fast nor too slow compared to the data rate into the hardware.
 #
-# FIXME: It seems to work now, but does it really? Need to understand the
-#        underlying mechanisms better.
+# - It seems to work now, but does it really? Need to understand the
+#   underlying mechanisms better.
+#     - Check/get the hardware's rate, which may be different from the
+#       "user-requested" rate. Set the rest of parameters accordingly.
 
 # initialize variables for data storage and plotting
 read_data = np.zeros([len(READ_CHANNELS), SAMPS_PER_CHAN])  # most recently read data
 data_history = np.nan * np.zeros([len(READ_CHANNELS), HISTORY_LENGTH])  # history of read data
 # generate x-values based on linspace, and repeat the same array for all channels
-xvalues = np.linspace(0, HISTORY_LENGTH, HISTORY_LENGTH)  # FIXME: For now, in samples, not in seconds
+xvalues = np.linspace(-HISTORY_LENGTH, 0, HISTORY_LENGTH)  # FIXME: For now, in samples, not in seconds
 xvalues = np.tile(xvalues, [len(READ_CHANNELS), 1])
 
 # create an interactive plotting window
 plt.ion()
 fig, axs = plt.subplots()
 lines = axs.plot(xvalues.T, data_history.T)
-axs.set_xlabel('History of samples')
+axs.set_xlabel('History of samples (newest on the right ->)')
 axs.set_ylabel('Voltage [V]')
+axs.set_title(f"Real-time plot, sampling rate = {READ_RATE} Hz")
+axs.legend(READ_CHANNELS, loc='upper left')
 
 plt.show()
 
